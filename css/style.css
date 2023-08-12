@@ -1,0 +1,767 @@
+:root{
+    --primary-color: #3b82f6;
+    --white: #FFF;
+    --black: #000;
+    --g-text: #475467;
+    --b-text: #101828;
+    --h-fonts: "Onest";
+}
+/* ============= Common CSS ============= */
+
+/* font-family: 'Inter'; */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter';
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0 77px;
+}
+input:focus{
+    outline: none;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+
+/* =========== Component ============= */
+.button{
+    text-align: right;
+    margin: 24px;
+}
+.button a{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--g-text);
+    line-height: 31px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 40px;
+    transition: all 0.5s;
+}
+.button a:hover{
+    width: 50px;
+    letter-spacing: 3px;
+}
+.button a i{
+    color: var(--g-text);
+    font-size: 16px;
+    line-height: 31px;
+    height: 14px;
+    padding-left: 25px;
+}
+.btn{
+    padding: 7px 14px;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid #000;
+    background-color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 1px;
+    display: inline-block;
+    transition: all 0.5s;
+}
+.btn:hover{
+    background-color: #000;
+}
+.btn-black{
+    background-color: transparent;
+    color: #000;
+}
+.btn-black:hover{
+    color: var(--white);
+    background-color: #000;
+}
+.heading{
+    margin-bottom: 40px;
+}
+.heading span{
+    color: var(--b-text);
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.heading h2{
+    color: var(--b-text);
+    font-weight: 700;
+    font-size: 38px;
+    text-transform: capitalize;
+    line-height: 48px;
+    margin-bottom: 30px;
+}
+.heading p{
+    color: var(--g-text);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px; 
+}
+.success .heading p{
+    color: var(--g-text);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 34px;
+    max-width: 680px;
+}
+
+
+/* ============ Header =============== */
+header{
+    padding: 25px 0 40px;
+    border-bottom: 1px solid var(--b-text);
+    border-top: 15px solid var(--primary-color);
+}
+header .row{
+    align-items: center;
+}
+header .logo img{
+    width: 100px;
+}
+header .main-menu{
+    display: flex;
+}
+header .main-menu li{
+    padding: 0 20px;
+}
+header .main-menu li a,
+header nav .header-contact
+{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--b-text);
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+}
+header .mega-menu{
+    display: flex;
+    padding: 20px;
+    outline: 1px solid #000;
+    border-bottom: 10px solid var(--primary-color);
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background-color: var(--white);
+}
+header .mega-menu li{
+    padding: 0;
+}
+header .mega-menu li a{
+    padding: 10px 20px;
+    text-transform: capitalize;
+    display: inline-block;
+    width: max-content;
+}
+header .dropdown{
+    position: relative;
+}
+header .dropdown:hover a + .mega-menu{
+    opacity: 1;
+    visibility: visible;
+    top: 70px;
+}
+
+/* ============= Banner Data ============ */
+.banner{
+    padding: 75px 0 140px;
+}
+.banner-data h1{
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 74px;
+    margin-bottom: 30px;
+    color: var(--b-text);
+    font-family: var(--h-font);
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px #000000;
+    position: relative;
+}
+.banner-data h1::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 16px;
+    background-color: #ffd900;
+    top: 33%;
+    left: 27%;
+    z-index: -1;
+}
+.banner-data p{
+    font-size: 17px;
+    line-height: 34px;
+    color: var(--g-text);
+}
+.banner-data .stats{
+    margin: 30px 0;
+    text-align: center;
+}
+.banner-data .stats h3{
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+}
+.banner-data .stats p{
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.banner .row .col-6:last-child img{
+    padding-left: 50px;
+}
+.banner-data .banner-btn a:first-child{
+    margin-right: 35px;
+}
+
+/* ============= House Cards ============ */
+.h-card{
+    padding-bottom: 90px;
+}
+.h-card .head{
+    padding-bottom: 140px;
+}
+.h-card .head h2{
+    font-size: 16px;
+    color: var(--b-text);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.h-card .head p{
+    font-size: 22px;
+    color: var(--b-text);
+    font-weight: 500;
+    line-height: 43px;
+    padding-left: 50px;     
+}
+.h-card-main{
+    padding: 0 30px;
+    margin-bottom: 60px;
+}
+.h-card-img img{
+    width: 420px;
+    height: 285px;
+}
+.h-card-img{
+    position: relative;
+}
+.h-card-img p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--white);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 7px 24px;
+    text-transform: uppercase;
+    line-height: 27px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+.h-card-image:hover p{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.h-card-data{
+    padding: 20px 0 50px;
+}
+.h-card-data h2{
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 7px;
+    color: var(--b-text);
+}
+.h-card-data p{
+    font-size: 14px;
+    color: var(--g-text);
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+.h-card-price{
+    display: flex;
+    justify-content: space-between;
+}
+.h-card-price .price{
+    font-size: 28px;
+    font-weight: 700;
+}
+.h-card-price .price i{
+    color: var(--primary-color);
+    padding-right: 20px;
+}
+.h-card-price .facilities span{
+    font-size: 16px;
+    padding-right: 12px; 
+
+}
+.h-card-price .facilities i{
+    font-size: 20px;
+}
+.h-card .all-btn {
+    text-align: right;
+    margin-right: 15px;
+}
+.h-card .all-btn a{
+    font-size: 14px;
+    color: var(--g-text);
+    text-transform: uppercase;
+    font-weight: 400;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s;
+}
+.h-card .all-btn a:hover{
+    letter-spacing: 2px;
+}
+.h-card .all-btn a i{
+    padding-left: 30px;
+}
+/* ================ Success ========== */
+.success{
+    padding-bottom: 140px;
+}
+.success-card{
+    padding: 30px;
+    border-left: 10px solid var(--primary-color);
+    outline: 1px solid var(--black);
+    margin: 0 15px;
+    height: 400px;
+}
+.success-card h3{
+    color: var(--b-text);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-bottom: 20px;
+}
+.success-card p{
+    color: var(--g-text);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 34px;
+}
+
+/* ================ Service ================ */
+
+.services span{
+    color: var(--b-text);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 31px;
+    text-transform: uppercase;
+}
+.services h2{
+    color: var(--b-text);
+    font-size: 39px;
+    font-weight: 700;
+    line-height: 48px   
+}
+.services .image img{
+    width: 1383px;
+    height: 538px;
+    object-fit: cover;
+}
+
+/*============= Service-card ==============*/
+.service-card{
+    margin-bottom: 100px;
+}
+.service-card .col-4{
+    padding: 25px;
+}
+.service-card .col-4 .card-main{
+    border-bottom: 10px solid var(--primary-color);
+    outline: 1px solid black;
+}
+.service-card .card-main h2{
+    font-size: 27px;
+    color: var(--b-text);
+    font-family: var(--h-fonts);
+    -webkit-text-stroke: 0.2px var(--b-text);
+    border-bottom: 1px solid black;
+    text-align: center;
+    line-height: 37px;
+    padding:24px;
+    margin-bottom: 16px;
+}
+.service-card .card-data .dot-wrap{
+    display: flex;
+    margin-left: 25px;
+}
+.service-card .card-data .dot-wrap .dot{
+    width: 17px;
+    height: 17px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--b-text);
+    border-radius: 50px;
+    margin-right: 16px;   
+}
+.service-card .card-data a h3{
+    color: var(--b-text);
+    font-size: 25px;
+    font-family: var(--h-fonts);
+    font-weight: 700;
+    line-height: 31px;
+    margin: 24px;
+}
+.service-card .card-data p{
+    color: var(--g-text);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 34px;
+    margin: 24px;
+}
+
+/* =================== Study =================== */
+.study{
+    margin-bottom: 150px;
+}
+.study .heading p{
+    margin-bottom: 30px;
+}
+.study .btn{
+    margin-right: 40px;
+}
+.study-card{
+    outline: 2px solid var(--black);
+    padding: 24px;
+}
+.study .col-4 .study-card span{
+    font-size: 16px;
+    color: var(--b-text);
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 31px;
+    margin-bottom: 24px;
+    display: inline-block;
+    position: relative;
+}
+.study .col-4 .study-card span::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -25px;
+    height: 30px;
+    width: 10px;
+    background-color: var(--primary-color);
+    border: 1px solid var(--black);
+}
+.study .col-4 .study-card h2{
+    font-size: 28px;
+    font-family: var(--h-fonts);
+    -webkit-text-stroke: 2px solid var(--b-text);
+    color: var(--b-text);
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+.study .col-4 .study-card p{
+    font-size: 17px;
+    color: var(--g-text);
+    line-height: 34px;
+    margin-bottom: 30px; 
+    display: inline-block;   
+}
+.study .heading{
+    padding-right: 50px;
+}
+
+/* ===================== Logo-line =================== */
+
+marquee{
+    background-color: var(--primary-color);
+    margin-bottom: 100px;
+}
+marquee img{
+    display: inline-block !important;
+    padding: 24px;
+}
+
+/* ====================== Story ==================== */
+.story{
+    margin-bottom: 150px;
+}
+.gallery{
+    column-count: 4;
+    gap: 15px;
+    width: 1728px;
+    height: 985px;
+}
+.gallery .img-1 img{
+    margin-bottom: 15px;
+    width: 415px;
+    height: 580px;
+    object-fit: cover;
+}
+.gallery .img-2 img{
+    margin-bottom: 15px;
+    width: 415px;
+    height: 385px;
+    object-fit: cover;
+}
+
+/* =================== Trust =============== */
+
+.trust {
+    display: flex;
+    height: 80%;
+}
+.trust .tcard-name{
+    margin-bottom: 24px;
+}
+.trust .tcard-name span{
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 31px;
+    text-transform: uppercase;
+    margin-right: 280px;
+    color: var(--b-text);
+}
+.trust .tcard-name i{
+    font-size: 20px;
+    padding-left: 8px;
+}
+.trust .tcard-data{
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--g-text);
+    line-height: 34px;
+    margin-bottom: 24px;
+}
+.trust .heading{
+    margin-right: 300px;
+}
+.trust .box{
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    height: 20%;
+    width: 15%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--b-text);
+}
+
+/* ====================== Contact =================== */
+.contact {
+    margin-bottom: 120px;
+}
+.contact .heading h2{
+    border-left: 10px solid var(--primary-color);
+    padding-left: 30px;
+}
+.Contact-btn{
+    text-align: right;
+}
+
+/* ================= Artical&News ============== */
+.artical{
+    margin-bottom: 140px;
+}
+.artical .row .artical-img{
+    position: relative;
+}
+.artical .row .artical-img p{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--white);
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.artical .row .artical-img p:hover{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 17px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    padding: 10px 15px;
+}
+.artical .row .artical-img img{
+    margin-bottom: 30px;
+    height: 285px;
+    width: 420px;
+}
+.artical .row .artical-main{
+    padding: 24px;
+}
+.artical .row .col-4{
+    margin-bottom: 30px;
+}
+.artical .row .artical-data h2{
+    font-family: var(--h-font);
+    font-size: 28px;
+    color: var(--b-text);
+    -webkit-text-stroke: 1px solid var(--b-text);
+    line-height: 39px;
+    cursor: pointer;
+    margin-bottom: 34px;
+}
+.artical .row .artical-data p{
+    color: var(--g-text);
+    font-size: 17px;
+    line-height: 33px;
+    width: 420px;
+}
+
+/* =================== Footer ================= */
+.footer{
+    border-bottom: 15px solid var(--primary-color);
+}
+.footer .row .col-8{
+    padding-right: 200px;
+}
+.footer .row .col-8 .footer-img img{
+    width: 93px;
+    height: 26px;
+    margin-bottom: 24px;
+}
+.footer .row .col-8 .footer-data p{
+    color: var(--g-text);
+    font-size: 17px;
+    line-height: 34px;
+    margin-bottom: 160px;
+}
+.footer .row .col-8 .footer-data span{
+    color: var(--g-text);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.footer hr{
+    margin-bottom: 30px;
+}
+.footer .row .col-2 .footer-menu h4{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 31px;
+    color: var(--b-text);
+    margin-bottom: 20px;
+}
+.footer .row .col-2 .footer-menu p{
+    color: var(--g-text);
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 34px;
+    margin-bottom: 20px;
+}
+.footer-owner{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+.footer-owner .footer-name img{
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 15px;
+}
+.footer-owner .footer-name p{
+    font-size: 16px;
+    color: var(--b-text);
+    line-height: 31px;
+}
+.footer-owner .footer-name a{
+    color: var(--b-text);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 31px;
+    transition: all 0.2s;
+}
+.footer-owner .footer-name a:hover{
+    color: var(--g-text);
+}
+.footer-owner .footer-power p{
+    font-size: 16px;
+    color: var(--b-text);
+    line-height: 31px;
+}
+.footer-owner .footer-power a{
+    color: var(--b-text);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 31px;
+    transition: all 0.2s;
+}
+.footer-owner .footer-power a:hover{
+    color: var(--g-text);
+}
+
